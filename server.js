@@ -32,7 +32,7 @@ app.post('/shorturl', async (req, res) => {
       longURL: url,
     });
     await newURL.save();
-    res.json({ shortURL: `http://localhost:4000/${newURL.shortCode}` });
+    res.json({ shortURL: `https://url-shorten-fc2x.onrender.com/${newURL.shortCode}` });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
